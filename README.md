@@ -13,10 +13,17 @@
 > pluginFile : string  
 >   The path to the executable plugin file.
 
+#### Returns
+
+> plugin : *Plugin
+>   A plugin reference.
+
+> err : error
+>   An error object.
+
 #### Example
 
 ```go
-// Load a plugin from the executable
 plug, err := goplugin.Load("C:/tmp/testplugin.exe")
 if err != nil {
   log.Fatal(err)
@@ -30,7 +37,15 @@ if err != nil {
 #### Parameters
 
 > directory : string
->   LoadFromDirectory finds all executables in a directory and generates Plugins for each one.
+>   The path to the directory containing the plugins.
+
+#### Returns
+
+> plugins : map[string]*Plugin
+>   A map of plugin references accessible by plugin name.
+
+> err : error
+>   An error object.
 
 #### Example
 
@@ -41,7 +56,138 @@ if err != nil {
 }
 ```
 
-## Example
+### NewPlugin
+
+*NewPlugin returns a reference to a new Plugin object.*
+
+#### Parameters
+
+> host : string
+>   The host to execute the Plugin on (defaults to "localhost").
+
+> name : string
+>   The name of the plugin.
+
+> pluginFile : string
+>   The path to the plugins executable file.
+
+> port : string
+>   The port number the RPC server should listen on.
+
+#### Returns
+
+> *Plugin
+>   A reference to the Plugin object.
+
+#### Example
+
+```go
+plugin = NewPlugin(
+  host,
+  name,
+  pluginFile,
+  fmt.Sprintf("%v", port),
+)
+```
+
+### Plugin.ToString
+
+*ToString returns the string representation of the Plugin object.*
+
+#### Returns
+
+> error
+>   An error object.
+
+#### Example
+
+```go
+plug, _ := goplugin.Load("C:/tmp/testplugin.exe")
+
+log.Print(plug.ToString())
+```
+
+### Plugin.StartServer
+
+*StartServer starts the related RPC plugin server.*
+
+#### Returns
+
+> error
+>   An error object.
+
+#### Example
+
+```go
+plug, _ := goplugin.Load("C:/tmp/testplugin.exe")
+
+_ = plug.StartServer()
+```
+
+### Plugin.Dial
+
+*Dial connects the RPC client to the running server (running plugin executable).*
+
+#### Returns
+
+> error
+>   An error object.
+
+#### Example
+
+```go
+plug, _ := goplugin.Load("C:/tmp/testplugin.exe")
+
+_ = plug.Dial()
+```
+
+### Plugin.Call
+
+*Dial connects the RPC client to the running server (running plugin executable).*
+
+#### Returns
+
+> response : string
+>   The string, preferably JSON, representation of the response.
+
+> error
+>   An error object.
+
+#### Example
+
+```go
+response, err := plug.Call("Listener.ExecuteV2", "{\"woot\": \"woot\"}")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println(response)
+```
+
+### Plugin.Invoke
+
+*Invoke starts the plugin server, dials the plugin server, and calls a plugin server function.*
+
+#### Returns
+
+> response : string
+>   The string, preferably JSON, representation of the response.
+
+> error
+>   An error object.
+
+#### Example
+
+```go
+response, err := plug.Invoke("Listener.ExecuteV2", "{\"woot\": \"woot\"}")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println(response)
+```
+
+## Load Complete Example
 
 The "client" Plugin type allows for easy communication and management of RPC server plugins.
 
@@ -75,7 +221,7 @@ func main() {
 }
 ```
 
-## Example
+## LoadFromDirectory Complete Example
 
 The "client" Plugin type allows for easy communication and management of RPC server plugins.
 
@@ -113,7 +259,7 @@ func main() {
 
 A plugin is a go RPC server application that registers execution functions against a "Listener" and registers those functions with the RPC server.
 
-### Example
+### Plugin Example
 
 ```go
 package main
