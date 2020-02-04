@@ -10,15 +10,18 @@
 
 #### Parameters
 
-> pluginFile : string  
+> pluginFile : string    
+>
 > &nbsp;&nbsp;The path to the executable plugin file.
 
 #### Returns
 
-> plugin : *Plugin
+> plugin : *Plugin  
+>
 > &nbsp;&nbsp;A plugin reference.
 
-> err : error
+> err : error  
+>
 > &nbsp;&nbsp;An error object.
 
 #### Example
@@ -36,15 +39,18 @@ if err != nil {
 
 #### Parameters
 
-> directory : string
+> directory : string  
+>
 > &nbsp;&nbsp;The path to the directory containing the plugins.
 
 #### Returns
 
-> plugins : map[string]*Plugin
+> plugins : map[string]*Plugin  
+>
 > &nbsp;&nbsp;A map of plugin references accessible by plugin name.
 
-> err : error
+> err : error  
+>
 > &nbsp;&nbsp;An error object.
 
 #### Example
@@ -62,21 +68,26 @@ if err != nil {
 
 #### Parameters
 
-> host : string
+> host : string  
+>
 > &nbsp;&nbsp;The host to execute the Plugin on (defaults to "localhost").
 
-> name : string
+> name : string  
+>
 > &nbsp;&nbsp;The name of the plugin.
 
-> pluginFile : string
+> pluginFile : string  
+>
 > &nbsp;&nbsp;The path to the plugins executable file.
 
-> port : string
+> port : string  
+>
 > &nbsp;&nbsp;The port number the RPC server should listen on.
 
 #### Returns
 
-> *Plugin
+> *Plugin  
+>
 > &nbsp;&nbsp;A reference to the Plugin object.
 
 #### Example
@@ -96,7 +107,8 @@ plugin = NewPlugin(
 
 #### Returns
 
-> error
+> error  
+>
 > &nbsp;&nbsp;An error object.
 
 #### Example
@@ -113,7 +125,8 @@ log.Print(plug.ToString())
 
 #### Returns
 
-> error
+> error  
+>
 > &nbsp;&nbsp;An error object.
 
 #### Example
@@ -130,7 +143,8 @@ _ = plug.StartServer()
 
 #### Returns
 
-> error
+> error  
+>
 > &nbsp;&nbsp;An error object.
 
 #### Example
@@ -147,10 +161,12 @@ _ = plug.Dial()
 
 #### Returns
 
-> response : string
+> response : string  
+>
 > &nbsp;&nbsp;The string, preferably JSON, representation of the response.
 
-> error
+> error  
+>
 > &nbsp;&nbsp;An error object.
 
 #### Example
@@ -170,10 +186,12 @@ response, err := plug.Call("Listener.ExecuteV2", "{\"woot\": \"woot\"}")
 
 #### Returns
 
-> response : string
+> response : string  
+>
 > &nbsp;&nbsp;The string, preferably JSON, representation of the response.
 
-> error
+> error  
+>
 > &nbsp;&nbsp;An error object.
 
 #### Example
