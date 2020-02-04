@@ -1,7 +1,7 @@
 all: install
 
 install:
-	go install goplugin
+	go install ./plugin
 
 clean:
 	go clean ./...
