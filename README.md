@@ -2,6 +2,40 @@
 
 *A simple RPC based framework for calling "plugins" (RPC servers).*
 
+- [goplugin](#goplugin)
+  * [Reference](#reference)
+    + [Load](#load)
+      - [Parameters](#parameters)
+      - [Returns](#returns)
+      - [Example](#example)
+    + [LoadFromDirectory](#loadfromdirectory)
+      - [Parameters](#parameters-1)
+      - [Returns](#returns-1)
+      - [Example](#example-1)
+    + [NewPlugin](#newplugin)
+      - [Parameters](#parameters-2)
+      - [Returns](#returns-2)
+      - [Example](#example-2)
+    + [Plugin.ToString](#plugintostring)
+      - [Returns](#returns-3)
+      - [Example](#example-3)
+    + [Plugin.StartServer](#pluginstartserver)
+      - [Returns](#returns-4)
+      - [Example](#example-4)
+    + [Plugin.Dial](#plugindial)
+      - [Returns](#returns-5)
+      - [Example](#example-5)
+    + [Plugin.Call](#plugincall)
+      - [Returns](#returns-6)
+      - [Example](#example-6)
+    + [Plugin.Invoke](#plugininvoke)
+      - [Returns](#returns-7)
+      - [Example](#example-7)
+  * [Load Complete Example](#load-complete-example)
+  * [LoadFromDirectory Complete Example](#loadfromdirectory-complete-example)
+  * [Plugin](#plugin)
+    + [Plugin Example](#plugin-example)
+
 ## Reference
 
 ### Load
