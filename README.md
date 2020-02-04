@@ -11,15 +11,15 @@
 #### Parameters
 
 > pluginFile : string  
->   The path to the executable plugin file.
+> &nbsp;&nbsp;The path to the executable plugin file.
 
 #### Returns
 
 > plugin : *Plugin
->   A plugin reference.
+> &nbsp;&nbsp;A plugin reference.
 
 > err : error
->   An error object.
+> &nbsp;&nbsp;An error object.
 
 #### Example
 
@@ -37,15 +37,15 @@ if err != nil {
 #### Parameters
 
 > directory : string
->   The path to the directory containing the plugins.
+> &nbsp;&nbsp;The path to the directory containing the plugins.
 
 #### Returns
 
 > plugins : map[string]*Plugin
->   A map of plugin references accessible by plugin name.
+> &nbsp;&nbsp;A map of plugin references accessible by plugin name.
 
 > err : error
->   An error object.
+> &nbsp;&nbsp;An error object.
 
 #### Example
 
@@ -63,21 +63,21 @@ if err != nil {
 #### Parameters
 
 > host : string
->   The host to execute the Plugin on (defaults to "localhost").
+> &nbsp;&nbsp;The host to execute the Plugin on (defaults to "localhost").
 
 > name : string
->   The name of the plugin.
+> &nbsp;&nbsp;The name of the plugin.
 
 > pluginFile : string
->   The path to the plugins executable file.
+> &nbsp;&nbsp;The path to the plugins executable file.
 
 > port : string
->   The port number the RPC server should listen on.
+> &nbsp;&nbsp;The port number the RPC server should listen on.
 
 #### Returns
 
 > *Plugin
->   A reference to the Plugin object.
+> &nbsp;&nbsp;A reference to the Plugin object.
 
 #### Example
 
@@ -97,7 +97,7 @@ plugin = NewPlugin(
 #### Returns
 
 > error
->   An error object.
+> &nbsp;&nbsp;An error object.
 
 #### Example
 
@@ -114,7 +114,7 @@ log.Print(plug.ToString())
 #### Returns
 
 > error
->   An error object.
+> &nbsp;&nbsp;An error object.
 
 #### Example
 
@@ -131,7 +131,7 @@ _ = plug.StartServer()
 #### Returns
 
 > error
->   An error object.
+> &nbsp;&nbsp;An error object.
 
 #### Example
 
@@ -148,10 +148,10 @@ _ = plug.Dial()
 #### Returns
 
 > response : string
->   The string, preferably JSON, representation of the response.
+> &nbsp;&nbsp;The string, preferably JSON, representation of the response.
 
 > error
->   An error object.
+> &nbsp;&nbsp;An error object.
 
 #### Example
 
@@ -171,10 +171,10 @@ response, err := plug.Call("Listener.ExecuteV2", "{\"woot\": \"woot\"}")
 #### Returns
 
 > response : string
->   The string, preferably JSON, representation of the response.
+> &nbsp;&nbsp;The string, preferably JSON, representation of the response.
 
 > error
->   An error object.
+> &nbsp;&nbsp;An error object.
 
 #### Example
 
