@@ -3,6 +3,7 @@
 *A simple RPC based framework for calling "plugins" (RPC servers).*
 
 - [goplugin](#goplugin)
+  * [Installation](#installation)
   * [Reference](#reference)
     + [Load](#load)
     + [LoadFromDirectory](#loadfromdirectory)
@@ -15,6 +16,25 @@
   * [Load Complete Example](#load-complete-example)
   * [LoadFromDirectory Complete Example](#loadfromdirectory-complete-example)
   * [RPC Server Executable Plugin](#rpc-server-executable-plugin)
+
+## Installation
+
+The easiest way to install this package is via `go get github.com/ekeel/goplugin`.
+
+Alternatively, you may clone the git repo and use make or go commands to install.
+
+```bash
+git clone github.com/ekeel/goplugin
+cd goplugin
+
+make
+```
+
+```bash
+git clone github.com/ekeel/goplugin
+
+go install ./goplugin
+```
 
 ## Reference
 
