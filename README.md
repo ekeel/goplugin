@@ -14,7 +14,7 @@
     + [Plugin.Invoke](#plugininvoke)
   * [Load Complete Example](#load-complete-example)
   * [LoadFromDirectory Complete Example](#loadfromdirectory-complete-example)
-  * [RPC Server (Executable Plugin)](#rpc-server--executable-plugin-)
+  * [RPC Server Executable Plugin](#rpc-server-executable-plugin)
 
 ## Reference
 
@@ -269,11 +269,11 @@ func main() {
 }
 ```
 
-## RPC Server (Executable Plugin)
+## RPC Server Executable Plugin
 
 A plugin is a go RPC server application that registers execution functions against a "Listener" and registers those functions with the RPC server.
 
-### RPC Server (Executable Plugin) Example
+### RPC Server Executable Plugin Example
 
 ```go
 package main
