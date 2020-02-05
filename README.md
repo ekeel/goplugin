@@ -15,7 +15,6 @@
   * [Load Complete Example](#load-complete-example)
   * [LoadFromDirectory Complete Example](#loadfromdirectory-complete-example)
   * [RPC Server (Executable Plugin)](#rpc-server--executable-plugin-)
-    + [RPC Server (Executable Plugin) Example](#rpc-server--executable-plugin--example)
 
 ## Reference
 
