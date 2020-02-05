@@ -4,6 +4,7 @@
 
 - [goplugin](#goplugin)
   * [Installation](#installation)
+	* [Dependencies](#dependencies)
   * [Reference](#reference)
     + [Load](#load)
     + [LoadFromDirectory](#loadfromdirectory)
