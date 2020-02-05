@@ -36,6 +36,10 @@ git clone github.com/ekeel/goplugin
 go install ./goplugin
 ```
 
+## Dependencies
+
+`require github.com/phayes/freeport v0.0.0-20180830031419-95f893ade6f2`
+
 ## Reference
 
 ### Load
